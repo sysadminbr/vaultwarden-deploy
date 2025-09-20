@@ -153,6 +153,21 @@ sudo docker compose up -d
 ### Download dos clientes do cofre    
 Para download dos clientes do cofre (browser plugin, desktop app, mobile, ...) visite a página https://bitwarden.com/download/.
 
+### Observações ao usar o cliente CLI  
+BITWARDEN CLI - (PARA USAR COM VAULTWARDEN)  
+```
+Ao chamar na linha de comandos, tem que passar a env do certificado auto-assinado.
+
+exemplo cmd  
+set NODE_EXTRA_CA_CERTS=cofre.intranet.corp.crt bw login
+
+
+login with apikey - Using API key environment variables
+
+https://bitwarden.com/help/cli/
+```
+
+
 # Documentação Oficial  
 https://github.com/dani-garcia/vaultwarden  
 https://github.com/dani-garcia/vaultwarden/wiki  
