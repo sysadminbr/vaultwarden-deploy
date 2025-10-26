@@ -158,13 +158,22 @@ BITWARDEN CLI - (PARA USAR COM VAULTWARDEN)
 ```
 Ao chamar na linha de comandos, tem que passar a env do certificado auto-assinado.
 
-exemplo cmd  
-set NODE_EXTRA_CA_CERTS=cofre.intranet.corp.crt bw login
+Exemplo no powershell do windows  
+$env:NODE_EXTRA_CA_CERTS=cofre.intranet.corp.crt
+$env:BW_CLIENTID=user.1df9ab67-5069-4ca4-b782-1cf34a25783e
+$env:BW_CLIENTSECRET=MumllzNjB65ckyQPgpJqbj7k9tDRQk
+
+bw.exe config set server https://cofre.citrait.corp
+bw login --apikey
+bw unlock
+
+# Your vault is now unlocked!
+# To unlock your vault, set your session key to the `BW_SESSION` environment variable. ex:
+$env:BW_SESSION="47a1zaVaYfRZElL9Ed3Z12kOnUqN4VSEQ7eU6mE5y/9NAHpZO1cRkh2C46suFok2dub2BMSdU+qyy4cIVTfF0A=="
 
 
-login with apikey - Using API key environment variables
-
-https://bitwarden.com/help/cli/
+# bw list items
+# bw serve
 ```
 
 
@@ -172,6 +181,7 @@ https://bitwarden.com/help/cli/
 https://github.com/dani-garcia/vaultwarden  
 https://github.com/dani-garcia/vaultwarden/wiki  
 https://bitwarden.com/download/  
+https://bitwarden.com/help/cli/
 
 
 
