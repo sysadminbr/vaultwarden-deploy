@@ -79,7 +79,7 @@ openssl req -x509 -new -nodes -key ca.key -sha256 -days 3650 \
   -out ca.pem -subj "/CN=CA-COFRE" -addext "basicConstraints = critical, CA:TRUE"
 
 # gerando o certificado assinado pela CA
-openssl req -new -x509 -subj "/CN=cofre.citrait.corp" -CA ca.crt -CAkey ca.key \
+openssl req -new -x509 -subj "/CN=cofre.citrait.corp" -CA ca.pem -CAkey ca.key \
 	-addext "subjectAltName=DNS:cofre.citrait.corp" -days 365 \
 	-newkey 2048 -keyout cofre.key -out cofre.pem -nodes
 
