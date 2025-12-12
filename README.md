@@ -101,7 +101,7 @@ sudo apt install nginx -y
 
 
 ### Configurar o nginx 
-#### Exexute o bloco de código abaixo para criar uma configuração padrão do nginx para o vaultwarden
+#### Execute o bloco de código abaixo para criar uma configuração padrão do nginx para o vaultwarden
 ```
 cat << "EOF" > default
 # onde buscar o upstream (porta do container)
